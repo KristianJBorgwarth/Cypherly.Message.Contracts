@@ -12,8 +12,12 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: dotnet pack -c Release
-      - run: dotnet nuget push "*/CypherlyMessage.Contracts*.nupkg" \
-             -k ${{ secrets.GITHUB_TOKEN }} \
-             -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
-             --skip-duplicate
+
+      - run: dotnet build CypherlyMessage.Contracts/CypherlyMessage.Contracts.csproj -c Release
+
+      - run: dotnet pack  CypherlyMessage.Contracts/CypherlyMessage.Contracts.csproj -c Release --no-build
+
+      - run: dotnet nuget push "CypherlyMessage.Contracts/bin/Release/**/*.nupkg" \
+          -k ${{ secrets.GITHUB_TOKEN }} \
+          -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
+          --skip-duplicate
