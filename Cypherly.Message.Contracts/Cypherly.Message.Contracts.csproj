@@ -2,10 +2,17 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>1.0.5</Version>
-        <Authors>KJBF</Authors>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Cypherly.Message.Contracts</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>KristianJBorgwarth</Authors>
+        <PackageDescription>Shared message contracts for Cypherly services.</PackageDescription>
+        <PackageLicenseExpression>Proprietary</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <IncludeSymbols>false</IncludeSymbols>
+        <IncludeSource>false</IncludeSource>
     </PropertyGroup>
 
     <ItemGroup>
