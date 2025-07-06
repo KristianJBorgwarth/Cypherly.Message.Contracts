@@ -9,13 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
 
       - run: dotnet build Cypherly.Message.Contracts/Cypherly.Message.Contracts.csproj -c Release
-      - run: dotnet pack  Cypherly.Message.Contracts/Cypherly.Message.Contracts.csproj -c Release --no-build
-      - run: dotnet nuget push "Cypherly.Message.Contracts/bin/Release/**/*.nupkg" \
-          -k ${{ secrets.GITHUB_TOKEN }} \
-          -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
-          --skip-duplicate
+      - run: dotnet pack Cypherly.Message.Contracts/Cypherly.Message.Contracts.csproj -c Release --no-build
+
+      - run: |
+          dotnet nuget push "Cypherly.Message.Contracts/bin/Release/**/*.nupkg" \
+            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
+            --skip-duplicate
