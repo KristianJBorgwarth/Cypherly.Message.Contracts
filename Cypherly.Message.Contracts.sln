@@ -2,6 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cypherly.Message.Contracts", "Cypherly.Message.Contracts\Cypherly.Message.Contracts.csproj", "{31414BB9-8BFB-48FA-B677-FF6FF81B597D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F51CA069-B42A-403C-92BD-7FC089148FA6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9418C8B-BC1D-4247-858D-69A303D5EA04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +19,8 @@ Global
 		{31414BB9-8BFB-48FA-B677-FF6FF81B597D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31414BB9-8BFB-48FA-B677-FF6FF81B597D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31414BB9-8BFB-48FA-B677-FF6FF81B597D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31414BB9-8BFB-48FA-B677-FF6FF81B597D} = {A9418C8B-BC1D-4247-858D-69A303D5EA04}
 	EndGlobalSection
 EndGlobal
