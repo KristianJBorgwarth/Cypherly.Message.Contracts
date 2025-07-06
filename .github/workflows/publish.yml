@@ -1,0 +1,19 @@
+name: publish-contracts
+
+on:
+  push:
+    tags: [ 'contracts-*' ]   # tag like contracts-1.0.0 when ready
+
+jobs:
+  nuget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+      - run: dotnet pack -c Release
+      - run: dotnet nuget push "*/CypherlyMessage.Contracts*.nupkg" \
+             -k ${{ secrets.GITHUB_TOKEN }} \
+             -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json \
+             --skip-duplicate
