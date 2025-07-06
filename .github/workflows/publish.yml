@@ -19,6 +19,6 @@ jobs:
 
       - run: |
           dotnet nuget push "Cypherly.Message.Contracts/bin/Release/**/*.nupkg" \
-            --api-key ${{ secrets.GITHUB_TOKEN }} \
+            --api-key ${{ secrets.PACKAGE_TOKEN }} \
             --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
             --skip-duplicate
