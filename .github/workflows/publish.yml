@@ -2,7 +2,7 @@ name: publish-contracts
 
 on:
   push:
-    tags: [ 'contracts-*' ]   # tag like contracts-1.0.0 when ready
+    tags: [ 'contracts-*' ]
 
 jobs:
   nuget:
