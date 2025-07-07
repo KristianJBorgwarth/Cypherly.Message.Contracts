@@ -3,7 +3,7 @@
 /// <summary>
 /// Base interface for all messages in the system.
 /// </summary>
-public interface IBaseMessage
+internal interface IBaseMessage
 {
     /// <summary>
     /// The time that the message was created.

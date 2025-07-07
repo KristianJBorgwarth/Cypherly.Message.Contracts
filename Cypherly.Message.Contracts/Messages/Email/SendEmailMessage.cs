@@ -1,6 +1,6 @@
 ﻿using Cypherly.Message.Contracts.Abstractions;
 
-namespace Cypherly.Message.Contracts.Messages;
+namespace Cypherly.Message.Contracts.Messages.Email;
 
 /// <summary>
 /// Represents a message to send an email.
