@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		Cypherly.Message.Contracts\bin\Release\nuget.config = Cypherly.Message.Contracts\bin\Release\nuget.config
+		.github\workflows\publish-package.yml = .github\workflows\publish-package.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9418C8B-BC1D-4247-858D-69A303D5EA04}"
