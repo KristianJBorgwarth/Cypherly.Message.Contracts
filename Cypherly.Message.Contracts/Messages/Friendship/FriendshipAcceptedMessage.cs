@@ -10,4 +10,5 @@ public sealed record FriendshipAcceptedMessage : IBaseMessage
     public required Guid? CausationId { get; init; }
     public required string RejectedUserProfileTag { get; init; }
     public required IReadOnlyCollection<Guid> ConnectionIds { get; init; }
+    public required IReadOnlyCollection<Guid> RouteIds { get; init; }
 }
