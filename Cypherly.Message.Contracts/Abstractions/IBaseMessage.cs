@@ -3,18 +3,18 @@
 /// <summary>
 /// Base interface for all messages in the system.
 /// </summary>
-internal interface IBaseMessage
+public interface IBaseMessage
 {
-    /// <summary>
-    /// The time that the message was created.
-    /// </summary>
-    public DateTime OccurredOn { get; init; }
-
     /// <summary>
     /// The unique identifier for this message.
     /// </summary>
-    public Guid Id { get; init; }
-
+    public Guid Id { get; }
+    
+    /// <summary>
+    /// The time that the message was created.
+    /// </summary>
+    public DateTime OccurredOn { get; }
+    
     /// <summary>
     /// Should be the same for all messages that are part of the same logical operation.
     /// Set by the originating message.
