@@ -8,7 +8,10 @@ public sealed record FriendshipAcceptedMessage : IBaseMessage
     public Guid Id { get; } = Guid.NewGuid();
     public required Guid CorrelationId { get; init; }
     public required Guid? CausationId { get; init; }
-    public required string RejectedUserProfileTag { get; init; }
-    public required IReadOnlyCollection<Guid> ConnectionIds { get; init; }
+    public required string Username { get; init; }
+    public required string Tag { get; init; }
+    public string? DisplayName { get; init; }
+    public string? ProfilePictureUrl { get; init; }
     public required IReadOnlyCollection<Guid> RouteIds { get; init; }
+    public required IReadOnlyCollection<Guid> ConnectionIds { get; init; }
 }

@@ -5,9 +5,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>KJBF</Authors>
-        <Version>2.3.0</Version>
-        <AssemblyVersion>2.3.0</AssemblyVersion>
-        <FileVersion>2.3.0</FileVersion>
+        <Version>2.3.1</Version>
+        <AssemblyVersion>2.3.1</AssemblyVersion>
+        <FileVersion>2.3.1</FileVersion>
         <Title>Cypherly.Message.Contracts</Title>
         <PackageDescription>Message Contracts for RabbitMQ/MassTransit</PackageDescription>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
