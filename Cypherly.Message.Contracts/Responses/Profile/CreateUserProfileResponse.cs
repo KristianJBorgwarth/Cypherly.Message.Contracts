@@ -6,8 +6,8 @@ public sealed record CreateUserProfileResponse : IResponse
 {
     public DateTime OccurredOn { get;} = DateTime.UtcNow;
     public Guid Id { get; } = Guid.NewGuid();
-    public Guid CorrelationId { get; init; }
-    public Guid? CausationId { get; init; }
-    public bool IsSuccess { get; init; }
-    public string? Error { get; init; }
+    public required Guid CorrelationId { get; init; }
+    public Guid? CausationId { get; init; }  = null;
+    public bool IsSuccess { get; init; } = true;
+    public string? Error { get; init; } = null;
 }

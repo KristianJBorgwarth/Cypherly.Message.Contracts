@@ -7,8 +7,8 @@ public sealed record CreateClientMessage : IBaseMessage
 {
     public DateTime OccurredOn { get;} = DateTime.UtcNow;
     public Guid Id { get; } = Guid.NewGuid();
-    public Guid CorrelationId { get; init; }
-    public Guid? CausationId { get; init; }
+    public required Guid CorrelationId { get; init; }
+    public Guid? CausationId { get; init; }  = null;
     public required Guid DeviceId { get; init; }
     public required Guid ConnectionId { get; init; }
 }

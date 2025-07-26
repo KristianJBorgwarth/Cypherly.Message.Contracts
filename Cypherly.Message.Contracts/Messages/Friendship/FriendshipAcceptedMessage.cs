@@ -7,7 +7,7 @@ public sealed record FriendshipAcceptedMessage : IBaseMessage
     public DateTime OccurredOn { get;} = DateTime.UtcNow;
     public Guid Id { get; } = Guid.NewGuid();
     public required Guid CorrelationId { get; init; }
-    public required Guid? CausationId { get; init; }
+    public Guid? CausationId { get; init; } = null;
     public required string Username { get; init; }
     public required string Tag { get; init; }
     public string? DisplayName { get; init; }
