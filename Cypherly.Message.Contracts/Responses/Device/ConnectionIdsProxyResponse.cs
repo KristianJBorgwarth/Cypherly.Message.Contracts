@@ -10,7 +10,7 @@ namespace Cypherly.Message.Contracts.Responses.Device
         public Guid? CausationId { get; init; } = null;
         public bool IsSuccess { get; init; } = true;
         public string? Error { get; init; } = null;
-        public string? UserTag { get; init; } = null;
+        public required string UserTag { get; init; } 
         public Dictionary<Guid, List<Guid>>? ConnectionIds { get; init; } = null;
     }
 }
