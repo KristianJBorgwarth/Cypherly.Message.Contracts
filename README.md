@@ -1,6 +1,6 @@
 # Cypherly.Message.Contracts
 
-This project contains shared message contract definitions used across the Cypherly services. These contracts define the structure of messages exchanged between services using asynchronous messaging (e.g., via RabbitMQ with MassTransit).
+This project contains shared message contract definitions used across the Cypherly services.
 
 ## Purpose
 
