@@ -11,7 +11,7 @@ public sealed record FriendshipAcceptedMessage : IBaseMessage
     public required string Username { get; init; }
     public required string Tag { get; init; }
     public string? DisplayName { get; init; }
-    public string? ProfilePictureUrl { get; init; }
+    public string? AvatarKey { get; init; }
     public required IReadOnlyCollection<Guid> RouteIds { get; init; }
     public required IReadOnlyCollection<Guid> ConnectionIds { get; init; }
 }

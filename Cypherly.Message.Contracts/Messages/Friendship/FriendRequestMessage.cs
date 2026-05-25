@@ -14,6 +14,6 @@ public sealed record FriendRequestMessage : IBaseMessage
     public required DateTime FriendRequestDate { get; init; }
     public required bool IsSeen { get; init; }
     public string? FriendDisplayName { get; init; }
-    public string? FriendProfilePictureUrl { get; init; }
+    public string? AvatarKey { get; init; }
     public required string FriendUsername { get; init; }
 }
