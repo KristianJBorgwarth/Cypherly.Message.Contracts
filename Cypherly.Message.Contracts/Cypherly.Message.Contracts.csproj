@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <Authors>KJBF</Authors>
-        <Version>3.0.1</Version>
-        <AssemblyVersion>3.0.1</AssemblyVersion>
-        <FileVersion>3.0.1</FileVersion>
+        <Version>3.0.2</Version>
+        <AssemblyVersion>3.0.2</AssemblyVersion>
+        <FileVersion>3.0.2</FileVersion>
         <Title>Cypherly.Message.Contracts</Title>
         <PackageDescription>Message Contracts for RabbitMQ/MassTransit</PackageDescription>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
