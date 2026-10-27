@@ -11,4 +11,5 @@ public sealed record CreateClientMessage : IBaseMessage
     public Guid? CausationId { get; init; }  = null;
     public required Guid DeviceId { get; init; }
     public required Guid ConnectionId { get; init; }
+    public required Guid UserId { get; init; }
 }
