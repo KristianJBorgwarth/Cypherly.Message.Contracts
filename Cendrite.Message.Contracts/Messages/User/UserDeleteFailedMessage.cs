@@ -1,0 +1,19 @@
+﻿using Cendrite.Message.Contracts.Abstractions;
+using Cendrite.Message.Contracts.Enums;
+
+namespace Cendrite.Message.Contracts.Messages.User;
+
+public sealed record UserDeleteFailedMessage : IBaseMessage
+{
+    public DateTime OccurredOn { get;} = DateTime.UtcNow;
+    public Guid Id { get; } = Guid.NewGuid();
+    public required Guid CorrelationId { get; init; }
+    public Guid? CausationId { get; init; }  = null;
+    public required Guid UserId { get; init; }
+    public required ServiceType[] Services { get; init; }
+
+    public bool ContainsService(ServiceType serviceType)
+    {
+        return Services.Contains(serviceType);
+    }
+}
